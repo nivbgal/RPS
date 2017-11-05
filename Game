@@ -1,0 +1,44 @@
+#importing the random module so the outcome of the computer can be randomized
+import random
+import time
+#main function
+def main():
+     rps = ['rock', 'paper', 'scissors']
+     val2 = (random.choice(rps))
+     val1 = raw_input('What do you choose? rock paper or scissors?')
+     print(val1 + ' is player one\'s selection')
+     print(val2 + ' is player two\'s selction')
+     print('-------------------------------------')
+     if val1 == val2:
+         print('It\'s A Draw!')
+     elif val1 == 'paper' and val2 == 'rock':
+         print('paper beats rock')
+         print('Player 1 Wins!')
+     elif val1 == 'rock' and val2 == 'paper':
+         print('paper beats rock')
+         print('Player 2 Wins!')
+     elif val1 == 'scissors' and val2 == 'rock':
+         print('rock beats scissors')
+         print('Player 2 Wins!')
+     elif val1 == 'rock' and val2 == 'scissors':
+         print('rock beats scissors')
+         print('Player 1 Wins!')
+     elif val1 == 'scissors' and val2 == 'paper':
+         print('scissors beats paper')
+         print('Player 1 Wins!')
+     elif val1 == 'paper' and val2 == 'scissors':
+         print('scissors beats paper')
+         print('Player 2 Wins!')
+
+#while loop to Ask the User if they want to continue playing or Exit The Program
+while (1==1):
+    var = int(input('1 To Play , 2 To Exit'))
+    if var == 1:
+        main()
+    elif var == 2:
+        print('See You Later!')
+        break
+    else:
+        print('Invalid Key-Press, Exiting Program')
+        break
+
